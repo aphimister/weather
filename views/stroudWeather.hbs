@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroud Weather</title>
+</head>
+
+<body>
+    <h1>The weather in Stroud:</h1>
+    <ul>
+        {{#each weatherObject}}
+        <li>
+            <p>{{this.day}}</p>
+            <p>{{this.temp}} °C</p>
+            <p>{{this.description}}</p>
+            <img src={{this.icon}} alt={{this.description}} </li>
+            {{/each}}
+    </ul>
+</body>
+
+</html>

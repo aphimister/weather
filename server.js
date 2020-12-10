@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post("/formResult", async (req, res) => {
+app.post("/search", async (req, res) => {
   const city = req.body.cityInput;
   const country = req.body.countryInput;
   try {
@@ -61,7 +61,7 @@ app.post("/formResult", async (req, res) => {
 app.get("/Stroud", async (req, res) => {
   try {
     const myApi = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=3a71f52109ea13652c84221c839f41f0&units=metric`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${apiKey}0&units=metric`
     );
     const daily = myApi.data.daily;
 
@@ -79,7 +79,7 @@ app.get("/Stroud", async (req, res) => {
     res.render("stroudWeather", { weatherObject: days });
   } catch (err) {
     console.log(err);
-    res.send("<h1>Unknown Error, please report to Alex</h1>");
+    res.send(`<h1>${err.response.data.message}</h1>`);
   }
 });
 

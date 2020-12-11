@@ -9,14 +9,13 @@
 </head>
 
 <body>
-    <h1>Enter your search</h1>
     {{>Search}}
     <h1>The weather forecast for <span id='city'>{{city}}</span>, <span id='countryCode'>{{country}}</span>:</h1>
     <ul>
         {{#each weatherObject}}
         <li>
             <p>{{this.day}}</p>
-            <p>{{this.temp}} °C</p>
+            <p>Average temp: {{this.temp}} °C</p>
             <p>{{this.description}}</p>
             <img src={{this.icon}} alt={{this.description}} </li>
             {{/each}}

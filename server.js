@@ -118,7 +118,7 @@ app.post("/", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.send("<h1>Page not found</h1>");
+  res.render("invalidAddress");
 });
 
 app.listen(5000, () => {

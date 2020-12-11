@@ -5,18 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/css/style.css' />
-    <title>Stroud Weather</title>
+    <title>Weather Forecast</title>
 </head>
 
 <body>
     <h1>Enter your search</h1>
-    <form action='/forecast' method='POST'>
-        <label for='cityInput'>City:</label></br>
-        <input required type='text' name='cityInput' /> </br>
-        <label for='countryInput'>Country:</label></br>
-        <input required type='text' name='countryInput' /></br>
-        <button type='submit'>Search</button>
-    </form>
+    {{>Search}}
     <h1>The weather forecast for <span id='city'>{{city}}</span>, <span id='countryCode'>{{country}}</span>:</h1>
     <ul>
         {{#each weatherObject}}
@@ -27,6 +21,7 @@
             <img src={{this.icon}} alt={{this.description}} </li>
             {{/each}}
     </ul>
+    {{>Navbar}}
 </body>
 
 </html>

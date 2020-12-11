@@ -5,21 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel='stylesheet' href='/css/style.css' />
-    <title>City Search</title>
+    <title>Weather Search</title>
 </head>
 
 <body>
 
 
     <h1>Enter your search</h1>
-    <form action='/' method='POST'>
-        <label for='cityInput'>City:</label></br>
-        <input required type='text' name='cityInput' /> </br>
-        <label for='countryInput'>Country:</label></br>
-        <input required type='text' name='countryInput' /></br>
-        <button type='submit'>Search</button>
-    </form>
-    <script src='/js/main.js'></script>
+    {{>Search}}
+    {{>Navbar}}
 </body>
 
 </html>

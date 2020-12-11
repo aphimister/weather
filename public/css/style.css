@@ -8,15 +8,17 @@ body {
 }
 
 form {
-  width: 20%;
+  width: 70%;
   margin: auto;
 }
-form input {
+form * {
   border-radius: 4px;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   padding: 3px;
   text-align: center;
+  box-shadow: none;
+  margin-top: 15px;
 }
 label {
   font-size: 30px;
@@ -46,4 +48,23 @@ ul li {
   border-radius: 4px;
   margin: 5px;
   width: 10%;
+}
+
+#navbar {
+  margin-top: 30px;
+}
+a {
+  margin-top: 15px;
+  text-decoration: none;
+  color: floralwhite;
+}
+@media all and (max-width: 1000px) {
+  ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  ul li {
+    width: 50%;
+  }
 }

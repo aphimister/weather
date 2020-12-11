@@ -9,7 +9,15 @@
 </head>
 
 <body>
-    <h1>The weather in Stroud:</h1>
+    <h1>Enter your search</h1>
+    <form action='/forecast' method='POST'>
+        <label for='cityInput'>City:</label></br>
+        <input required type='text' name='cityInput' /> </br>
+        <label for='countryInput'>Country:</label></br>
+        <input required type='text' name='countryInput' /></br>
+        <button type='submit'>Search</button>
+    </form>
+    <h1>The weather forecast for <span id='city'>{{city}}</span>, <span id='countryCode'>{{country}}</span>:</h1>
     <ul>
         {{#each weatherObject}}
         <li>
